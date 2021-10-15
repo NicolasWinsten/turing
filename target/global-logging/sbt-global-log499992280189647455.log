@@ -1,0 +1,10 @@
+[debug] > Exec(fullOptJS, None, None)
+[debug] Evaluating tasks: Compile / fullOptJS
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\mjwin\IdeaProjects\TM-sim\target\scala-2.13\classes ...
+[info] done compiling
+[info] Full optimizing C:\Users\mjwin\IdeaProjects\TM-sim\target\scala-2.13\tm-sim-opt
+[info] Closure: 0 error(s), 0 warning(s)
+[debug] Global IR cache stats: reused: 22 -- invalidated: 2 -- trees read: 2
+[success] Total time: 6 s, completed Oct 15, 2021 6:16:44 AM
+[debug] > Exec(idea-shell, None, None)

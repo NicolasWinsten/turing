@@ -1,0 +1,17 @@
+[debug] > Exec(__runWatch console0, Some(af474c12-facb-4534-a426-61791af3b56e), Some(CommandSource(console0)))
+[debug] > Exec(sbtStashOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__preWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(fastOptJS, None, Some(CommandSource(console0)))
+[debug] Evaluating tasks: Compile / fastOptJS
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\mjwin\IdeaProjects\TM-sim\target\scala-2.13\classes ...
+[info] done compiling
+[info] Fast optimizing C:\Users\mjwin\IdeaProjects\TM-sim\target\scala-2.13\tm-sim-fastopt
+[debug] Global IR cache stats: reused: 20 -- invalidated: 2 -- trees read: 2
+[debug] Forcing garbage collection...
+[success] Total time: 3 s, completed Oct 13, 2021 6:35:55 PM
+[debug] > Exec(resumeFromFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(sbtPopOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__postWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(__waitWatch console0, None, None)
