@@ -84,16 +84,65 @@ object examples {
       |""".stripMargin
 
   val gen =
-    """
-      |// this non-deterministic program
+    """// this non-deterministic program
       |// will output every binary string
       |// equal to the length of the input string
+      |// that ISNT a palindrome
       |
+      |// enumerate all n-length binary strings
       |qs 1 1 r qs
       |qs 1 0 r qs
       |qs 0 0 r qs
       |qs 0 1 r qs
-      |qs _ _ l halt
+      |qs _ _ l qfilter
       |
-      |""".stripMargin
+      |// start filtering out palindromes
+      |qfilter 1 i l qret1 // mark 1s with is
+      |qfilter 0 o l qret0 // mark 0s with os
+      |
+      |// return to the start to check if a 1 is there
+      |qret1 1 1 l qret1
+      |qret1 0 0 l qret1
+      |qret1 _ _ r qchop1
+      |qret1 i i r qchop1
+      |qret1 o o r qchop1
+      |
+      |// try and mark a 1
+      |qchop1 0 0 r qreturn // not a palindrome
+      |qchop1 1 i r qgoback // continue matching
+      |qchop1 i i r reject  // all matched
+      |qchop1 o o r reject
+      |
+      |// return to start to check if a 0 is there
+      |qret0 1 1 l qret0
+      |qret0 0 0 l qret0
+      |qret0 _ _ r qchop0
+      |qret0 i i r qchop0
+      |qret0 o o r qchop0
+      |
+      |// try and mark a 0
+      |qchop0 1 1 r qreturn // not a palindrome
+      |qchop0 0 o r qgoback // continue matching
+      |qchop0 i i r reject  // all matched
+      |qchop0 o o r reject
+      |
+      |// return to end of tape to find next char to match
+      |qgoback 0 0 r qgoback
+      |qgoback 1 1 r qgoback
+      |qgoback i i l qfilter
+      |qgoback o o l qfilter
+      |
+      |// return head to start to reform the string
+      |qreturn 1 1 l qreturn
+      |qreturn 0 0 l qreturn
+      |qreturn i i l qreturn
+      |qreturn o o l qreturn
+      |qreturn _ _ r qreform
+      |
+      |// unmark all 1s and 0s
+      |qreform i 1 r qreform
+      |qreform o 0 r qreform
+      |qreform 0 0 r qreform
+      |qreform 1 1 r qreform
+      |qreform _ _ l halt!""".stripMargin
 }

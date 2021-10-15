@@ -95,7 +95,7 @@ object index {
           li("The machine enters a state whose label starts with 'halt'"),
           li("The machine enters a state whose label starts with 'reject'"),
           li("The machine enters a state whose label starts with 'accept'",
-            ul(li("Note: the Non-deterministic machine will continue until all of its branches halt, or if just one reaches an 'accept' state"))),
+            ul(li("Note: the Non-deterministic machine will continue until all of its branches halt, or if just one reaches an 'accept' state. Other dead branches will be discarded. End your halting state label with '!' if you want to keep that branch in view, e.g. 'halt!'"))),
         )
       )
     ),
@@ -123,11 +123,13 @@ object index {
               document.getElementById("source").asInstanceOf[HTMLTextAreaElement].value = examples.anbncn
               document.getElementById("machineVariantSelector").asInstanceOf[HTMLSelectElement].selectedIndex = 1
               document.getElementById("tapeInput").asInstanceOf[HTMLInputElement].value = "aaabbbccc"
+              updateVariantDesc()
             }),
-            button("gen", margin := 5.px, onclick := {() =>
+            button("gen non-palindromes", margin := 5.px, onclick := {() =>
               document.getElementById("source").asInstanceOf[HTMLTextAreaElement].value = examples.gen
               document.getElementById("machineVariantSelector").asInstanceOf[HTMLSelectElement].selectedIndex = 3
-              document.getElementById("tapeInput").asInstanceOf[HTMLInputElement].value = "111"
+              document.getElementById("tapeInput").asInstanceOf[HTMLInputElement].value = "1111"
+              updateVariantDesc()
             })
           )
         )
@@ -196,7 +198,7 @@ object index {
         m.getTapes filterNot haltedBranches foreach { config =>
           val (tapeStr, head, state, canContinue) = config
           appendRow(tapeStr, head, state, canContinue)
-          if (state.matches("[(halt)(reject)].*") || !canContinue) haltedBranches += config
+          if ((state.matches("[(halt)(reject)].*") || !canContinue) && !state.endsWith("!")) haltedBranches += config
         }
       case null => ()
     }
@@ -220,7 +222,7 @@ object index {
     val lines = program.split("\n")
     val instructions = lines filterNot (line => line.trim.startsWith("//") || line.matches("\\s*"))
 
-    val pattern = """^([\w\-]+) (\S) (\S) ([lrLR]) ([\w\-]+)\s*(?://.*)?$"""
+    val pattern = """^([\w\-!]+) (\S) (\S) ([lrLR]) ([\w\-!]+)\s*(?://.*)?$"""
       .r("currState", "currSymbol", "newSymbol", "direction", "newState")
 
     val chosenVariant =
