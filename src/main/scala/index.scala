@@ -278,11 +278,13 @@ object index {
     if (paused) {
       pauseBtn.disabled = true
       runBtn.disabled = false
+      stepBtn.disabled = false
       paused = false
     }
     else if (machineCanContinue) {
       runBtn.disabled = true
       pauseBtn.disabled = false
+      stepBtn.disabled = true
       if (fullSpeed) { // jump 25 steps and then update display
         for (_ <- 1 to 25) if (machineCanContinue) machine.step()
         updateTapeDisplay()

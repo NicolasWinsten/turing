@@ -2,38 +2,5 @@
 [debug] IncrementalCompile.incrementalCompile
 [debug] previous = Stamps for: 18 products, 3 sources, 4 libraries
 [debug] current source = Set(${BASE}/src/main/scala/examples.scala, ${BASE}/src/main/scala/index.scala, ${BASE}/src/main/scala/TM.scala)
-[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/index.scala), unmodified = ...),Set(),Set(),API Changes: Set())
-[debug] 
-[debug] Initial source changes:
-[debug] 	removed: Set()
-[debug] 	added: Set()
-[debug] 	modified: Set(${BASE}/src/main/scala/index.scala)
-[debug] Invalidated products: Set()
-[debug] External API changes: API Changes: Set()
-[debug] Modified binary dependencies: Set()
-[debug] Initial directly invalidated classes: Set(index)
-[debug] Sources indirectly invalidated by:
-[debug] 	product: Set()
-[debug] 	binary dep: Set()
-[debug] 	external source: Set()
-[debug] All initially invalidated classes: Set(index)
-[debug] All initially invalidated sources:Set(${BASE}/src/main/scala/index.scala)
-[debug] Initial set of included nodes: index
-[debug] compilation cycle 1
-[info] compiling 1 Scala source to C:\Users\mjwin\IdeaProjects\TM-sim\target\scala-2.13\classes ...
-[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.5.7:compile for Scala 2.13.5
-[debug] [zinc] Running cached compiler 2f86001 for Scala compiler version 2.13.5
-[debug] [zinc] The Scala compiler is invoked with:
-[debug] 	-Xplugin:C:\Users\mjwin\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-js\scalajs-compiler_2.13.5\1.7.1\scalajs-compiler_2.13.5-1.7.1.jar
-[debug] 	-bootclasspath
-[debug] 	C:\Program Files\Java\jdk1.8.0_241\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_241\jre\classes;C:\Users\mjwin\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.5\scala-library-2.13.5.jar
-[debug] 	-classpath
-[debug] 	C:\Users\mjwin\IdeaProjects\TM-sim\target\scala-2.13\classes;C:\Users\mjwin\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-js\scalajs-library_2.13\1.7.1\scalajs-library_2.13-1.7.1.jar;C:\Users\mjwin\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-js\scalajs-dom_sjs1_2.13\1.2.0\scalajs-dom_sjs1_2.13-1.2.0.jar;C:\Users\mjwin\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\lihaoyi\scalatags_sjs1_2.13\0.9.2\scalatags_sjs1_2.13-0.9.2.jar;C:\Users\mjwin\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\lihaoyi\sourcecode_sjs1_2.13\0.2.1\sourcecode_sjs1_2.13-0.2.1.jar;C:\Users\mjwin\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\lihaoyi\geny_sjs1_2.13\0.6.2\geny_sjs1_2.13-0.6.2.jar
-[debug] New invalidations:
-[debug] Initial set of included nodes: 
-[debug] Previously invalidated, but (transitively) depend on new invalidations:
-[debug] Final step, transitive dependencies:
-[debug] 	Set()
-[debug] No classes were invalidated.
-[debug] Scala compilation took 0.6357293 s
-[info] done compiling
+[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] No changes

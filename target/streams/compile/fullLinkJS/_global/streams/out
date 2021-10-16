@@ -1,26 +1,26 @@
 [info] Full optimizing C:\Users\mjwin\IdeaProjects\TM-sim\target\scala-2.13\tm-sim-opt
-[debug] Linker: Compute reachability: 36048 us
-[debug] Linker: Assemble LinkedClasses: 4649 us
-[debug] Linker: Check IR: 34380 us
-[debug] Linker: 89868 us
+[debug] Linker: Compute reachability: 104357 us
+[debug] Linker: Assemble LinkedClasses: 16587 us
+[debug] Linker: Check IR: 190274 us
+[debug] Linker: 330367 us
 [debug] Optimizer: Batch mode: false
-[debug] Optimizer: Incremental part: 5302 us
-[debug] Optimizer: Optimizing 157 methods.
-[debug] Optimizer: Optimizer part: 19854 us
-[debug] Optimizer: 27595 us
-[debug] Refiner: Compute reachability: 20668 us
-[debug] Refiner: Assemble LinkedClasses: 2111 us
-[debug] Refiner: 24631 us
-[debug] Module Splitter: Calculate Dependency Info: 185 us
-[debug] Module Splitter: Analyze Modules: 24 us
-[debug] Module Splitter: Assemble Modules: 212 us
-[debug] Module Splitter: 459 us
-[debug] Emitter: Generate Classes: 18366 us
-[debug] Emitter: Write trees: 1069 us
+[debug] Optimizer: Incremental part: 99816 us
+[debug] Optimizer: Optimizing 173 methods.
+[debug] Optimizer: Optimizer part: 87002 us
+[debug] Optimizer: 190327 us
+[debug] Refiner: Compute reachability: 40163 us
+[debug] Refiner: Assemble LinkedClasses: 3907 us
+[debug] Refiner: 53274 us
+[debug] Module Splitter: Calculate Dependency Info: 673 us
+[debug] Module Splitter: Analyze Modules: 309 us
+[debug] Module Splitter: Assemble Modules: 2202 us
+[debug] Module Splitter: 3701 us
+[debug] Emitter: Generate Classes: 77019 us
+[debug] Emitter: Write trees: 2320 us
 [debug] Emitter: Class tree cache stats: reused: 655 -- invalidated: 2
-[debug] Emitter: Method tree cache stats: reused: 2516 -- invalidated: 114
-[debug] Emitter: 22330 us
-[debug] Closure: Create trees): 36346 us
+[debug] Emitter: Method tree cache stats: reused: 2507 -- invalidated: 124
+[debug] Emitter: 95272 us
+[debug] Closure: Create trees): 132552 us
 [info] Closure: 0 error(s), 0 warning(s)
-[debug] Closure: Compiler pass: 2504655 us
-[debug] Closure: Write result: 52643 us
+[debug] Closure: Compiler pass: 4279034 us
+[debug] Closure: Write result: 84795 us

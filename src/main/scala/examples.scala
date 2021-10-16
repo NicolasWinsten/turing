@@ -52,7 +52,6 @@ object examples {
       |q3 c c r q3
       |q3 _ c l q4
       |
-      |// go back to the beginning
       |q4 a a l q4
       |q4 b b l q4
       |q4 c c l q4
