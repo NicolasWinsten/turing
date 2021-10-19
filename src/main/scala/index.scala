@@ -147,6 +147,7 @@ object index {
       ),
       controls,
       helpSection,
+      div(" -- ", a("Nicolas Winsten", href := "http://nicolaswinsten.com"), textAlign := "right", fontStyle := "italic", fontSize := "smaller"),
       fontFamily := "monospace", fontSize := 15.px,
       backgroundColor := "beige", padding := 10.px, borderStyle := "solid", borderWidth := 3.px, borderColor := "brown",
     )
